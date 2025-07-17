@@ -6,6 +6,8 @@ public class Main {
         obj.insertFirst(9);
         obj.insertFirst(21);
         obj.display();
+        
+
 
 
 

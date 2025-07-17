@@ -30,6 +30,17 @@ public class DLL
         head = node;
     }
 
+    public void insertLast(int val)
+    {
+        Node node = new Node(val);
+        node.prev = tail;
+        node = tail;
+        node.next = null;
+
+        
+
+    }
+
     public void display()
     {
         Node node = head;
@@ -41,7 +52,7 @@ public class DLL
             node = node.next;
         }
         System.out.println("END");
-        
+
         System.out.println("Printing in reverse");
         
         while(last != null)
