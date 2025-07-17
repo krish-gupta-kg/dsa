@@ -1,4 +1,24 @@
 package Recursion;
+public class Main{
+    //Print Even Numbers from 2 to N 
+
+    public static void main(String[] args) {
+        int n = 10;
+        func(2,n);
+    }
+    public static void func(int start,int n)
+    {
+        if(start > n)
+        {
+            return;
+        }
+        if(start % 2 == 0)
+        {
+            System.out.print(start + " ");
+        }
+        func(start +1,n);
+    }
+}
 
 //Count the number of digits of a number
 
