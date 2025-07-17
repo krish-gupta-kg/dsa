@@ -2,7 +2,7 @@ package Recursion;
 
 //Count the number of digits of a number
 
-public class Main{
+/* public class Main{
     public static void main(String[] args) {
         int ans = func(14365132);
         System.out.println("Count of numbers is : " + ans);
@@ -17,7 +17,7 @@ public class Main{
         return 1 + func(n/10);
 
     }
-}
+} */
 
 //Count the sum of digits of a number
 
