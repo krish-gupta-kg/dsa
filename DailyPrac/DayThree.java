@@ -34,7 +34,9 @@ class Logic
             }
             sum += fac;
         }
+        sc.close();
         return sum;
+        
         
     }
 }

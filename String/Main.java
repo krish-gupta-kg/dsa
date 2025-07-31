@@ -1,20 +1,21 @@
 package String;
-import java.util.Scanner;
+//import java.util.Scanner;
 
-//Find Substring
+// the 
+
 public class Main{
     public static void main(String[] args) {
-        int n = 5;
-        for(int i = n; i >=0; i--)
-        {
-            for(int j = 0; j <= i; j++)
-            {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
+        String A = "A";
+        String B = "A";
+        String C = A;
+        System.out.println(C == A);
+        System.out.println(A.equals(C));
+        System.out.println(A.charAt(0 ));
     }
 }
+
+
+
 
 
 /* Reversing string using StringBuilder

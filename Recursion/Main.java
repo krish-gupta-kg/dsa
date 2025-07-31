@@ -1,8 +1,59 @@
 package Recursion;
-public class Main{
-    //Print Even Numbers from 2 to N 
 
+public class Main
+{
     public static void main(String[] args) {
+        
+    }
+}
+
+
+//Calculate product of first N natural Numbers
+
+/* public class Main
+{
+    public static void main(String[] args) 
+    {
+        int ans = func(5);
+        System.out.println(ans);
+    }
+    public static int func( int n)
+    {
+        if(n == 1)
+        {
+            return 1;
+        }
+        return n*func(n-1);
+    }
+} */
+
+//Print number in reverse
+
+/* public class Main
+{
+    public static void main(String[] args) 
+    {
+        func(5876543);
+    }
+
+    public static int func(int n)
+    {
+        if(n == 0)
+        {
+            return 0;
+        }
+        System.out.print(n%10); // Print the last number
+        return func(n/10); //Delete the last number
+    }
+} */
+
+
+//Print Even Numbers from 2 to N 
+
+/* public class Main
+{
+    public static void main(String[] args) 
+    {
         int n = 10;
         func(2,n);
     }
@@ -16,9 +67,9 @@ public class Main{
         {
             System.out.print(start + " ");
         }
-        func(start +1,n);
+        func(start +1,n);  //Increment start by 1 and call the function again similar to looping concept
     }
-}
+} */
 
 //Count the number of digits of a number
 
@@ -58,6 +109,7 @@ public class Main{
 
 
 /* Sum of first N natural Numbers
+
 public class Main
 {
     public static void main(String[] args) {
@@ -132,6 +184,7 @@ public class Main
  
 
 //Factorial 
+
 /* 
     public class Main{
     int sum = 0;

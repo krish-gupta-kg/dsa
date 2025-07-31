@@ -23,25 +23,28 @@ public class DayEight {
             int n = sc.nextInt();
             int [] arr = new int [n];
         } */
+       Logic obj = new Logic();
+       obj.func(arr);
 
-    sc.close();   
+
+    sc.close();
 
     }
 }
 
 class Logic
 {
-    public boolean func()
+    public boolean func(int[] arr)
     {
-        for(int i = 0; i < arr.length; i++)
-        if(arr[i] < arr[i+1])
-            {
-                System.out.println("Sorted");
-            }
-            else
+        for (int i = 0; i < arr.length - 1; i++) 
+        {
+            if (arr[i] > arr[i + 1]) 
             {
                 System.out.println("Not Sorted");
+                return false;
             }
-        
+        }
+        System.out.println("Sorted");
+        return true;
     }
 }
