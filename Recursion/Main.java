@@ -1,16 +1,171 @@
 package Recursion;
+//Find the base condition
+//Break the problem into smaller problems
+//Create the recursive tree
+
+/* 
+Basic Recursion
 
 public class Main
+    {
+        public static void main(String[]args)
+        {
+            recursion(n);
+        }
+
+        static void recursion(int n)
+        {
+            if(n < 1) //Base Case
+            {
+                return;
+            }
+
+            System.out.println(n);
+
+            recursion(n+1); //Tail
+
+        }
+    
+    }
+*/
+
+//_____________________________________________________________________________
+
+//Fibonnaci using recursion
+
+/*  public class Main
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        System.out.println(fibo(6));
+    }
+
+    static int fibo(int n)
+    {
+         if(n < 2) // Base condition
+        {
+            return n;
+        }
         
+        return fibo(n-1) + fibo(n-2); // Formula
+    }
+}
+*/
+
+//_____________________________________________________________________________
+
+//Factorial using recursion
+
+/* 
+public class Main{
+    public static void main(String[] args) {
+        System.out.println(func(5));
+    }
+    static int func(int n)
+    {
+        if(n == 0)
+        {
+            return 1;
+        }
+        return n * func(n - 1);
+    }
+}
+*/
+
+//_____________________________________________________________________________
+
+
+// Printing number from  1 - n
+/* 
+ public class Main{ 
+
+    public static void func(int n)
+    {
+        if(n == 0)
+        {
+            return;
+        }
+        func(n-1);
+        System.out.println(n);
+    }
+    public static void main(String[] args) {
+        func(5);
+    }
+}  
+*/
+
+//______________________________________________________________________________
+
+// Printing number from  n - 1
+/* 
+ public class Main{ 
+
+    public static void func(int n)
+    {
+        if(n == 0)
+        {
+            return;
+        }
+        System.out.println(n);
+        func(n-1);
+    }
+    public static void main(String[] args) {
+        func(5);
+    }
+} 
+*/
+
+//________________________________________________________________________________
+
+//Sum of num
+/* 
+
+public class Main{
+    public static void main(String[] args) {
+        System.out.println(func(5));
+    }
+
+    public static int func(int n)
+    {
+        if(n == 0)
+        {
+            return 0;
+        }
+        return n + func(n-1);
     }
 }
 
+*/
+
+//________________________________________________________________________________
+
+//Count the sum of digits of a number
+
+/* 
+public class Main{
+    public static void main(String[] args) {
+        System.out.println(func(12345));
+    }
+
+    public static int func(int n)
+    {  
+        if(n == 0)
+        {
+            return 0;
+        }
+
+        return (n%10 + func(n/10));
+    }
+} 
+
+*/
+
+//________________________________________________________________________________
 
 //Calculate product of first N natural Numbers
 
-/* public class Main
+/* 
+public class Main
 {
     public static void main(String[] args) 
     {
@@ -23,13 +178,18 @@ public class Main
         {
             return 1;
         }
+
         return n*func(n-1);
     }
-} */
+} 
+*/
+
+//________________________________________________________________________________
 
 //Print number in reverse
 
-/* public class Main
+/*  
+public class Main
 {
     public static void main(String[] args) 
     {
@@ -45,8 +205,9 @@ public class Main
         System.out.print(n%10); // Print the last number
         return func(n/10); //Delete the last number
     }
-} */
+}  */
 
+//________________________________________________________________________________
 
 //Print Even Numbers from 2 to N 
 
@@ -69,7 +230,10 @@ public class Main
         }
         func(start +1,n);  //Increment start by 1 and call the function again similar to looping concept
     }
-} */
+}
+*/
+
+//________________________________________________________________________________
 
 //Count the number of digits of a number
 
@@ -88,52 +252,10 @@ public class Main
         return 1 + func(n/10);
 
     }
-} */
+}
+*/
 
-//Count the sum of digits of a number
-
-/* public class Main{
-    public static void main(String[] args) {
-        int result = func(12345);
-        System.out.println(result);
-    }
-    public static int func(int n)
-    {  
-        if(n == 0)
-        {
-            return 0;
-        }
-        return (n%10) + func(n/10);   
-    }
-} */
-
-
-/* Sum of first N natural Numbers
-
-public class Main
-{
-    public static void main(String[] args) {
-        int result = func(5);
-        System.out.println(result);
-
-    }
-
-    public static int func(int n)
-    { 
-        if(n <= 0)
-        {
-            System.out.println("Not a natural number");
-            return 0;
-        }
-        if(n == 1)
-        {
-            return 1;
-
-        }
-        return n+func(n-1);
-        
-    }
-} */
+//________________________________________________________________________________
 
 
 
@@ -143,7 +265,6 @@ public class Main
 {
     public static void main(String[] args) {
         msg(5);
-
 
     }
 
@@ -158,83 +279,67 @@ public class Main
             System.out.println("Hello");
         }
     }
-} */
+}
+*/ 
 
-// Printing number from  1 - n
 
-/* public class Main{ 
+//______________________________________________________________________________
+//recursionInArrays
+       
+//Find if array is sorted
 
-    public static void func(int n)
-    {
-        if(n == 0)
-        {
-            return;
-        }
-        System.out.println(n);
-        func(n-1);
-    }
-
+/*  public class Main{
     public static void main(String[] args) {
-        int n = 5;
-        System.out.println();
-        func(n);
+        int [] arr = {1,2,3,4,5,6};
+        System.out.println(func(arr, 0));
     }
-} 
-*/
- 
-
-//Factorial 
-
-/* 
-    public class Main{
-    int sum = 0;
-
-    public static int func(int n)   
+    public static boolean func(int[] arr, int index)
     {
-        if(n == 0 | n == 1)
+        if(index == arr.length -1)
         {
-            return 1;
+            return true;
         }
-        return n * func(n-1);
-    }
 
+        return arr[index] < arr[index+1] && func(arr,index+1);
+    }
+}  */
+
+//______________________________________________________________________________
+
+
+//Linear Search 
+/* 
+ public class Main{
     public static void main(String[] args) {
-        int n = func(5);
-        System.out.println(n);
-        func(n);
-        
+        int [] arr = {1,2,3,5,4};
+        System.out.println(findIndex(arr,0,4));
     }
-} 
-*/
 
-
-//Sum of First N natural numbers
-
-/* 
-public class Main{
-
-    public static int func(int n)
+     public static boolean func(int [] arr, int index, int target)
     {
-        if(n <= 0)
+        if(index == arr.length)
         {
-            return 0;
+            return false;
         }
-        return n + func(n - 1);
-    }
-    public static void main(String[] args)
+        return arr[index] == target || func(arr,index+1,target);
+    } 
+
+    public static int findIndex(int [] arr, int index, int target)
     {
-        int n = 8;
-        System.out.println(func(n));
+        if(index == arr.length)
+        {
+            return -1;
+        }
+        if(index == target)
+        {
+            return index;
+        }
+        else
+        {
+            return findIndex(arr, index+1, target);
+        }
     }
-} 
-*/
 
+}  */
 
-/*  
-print the even number 2 to n
-product of first n natural numbers 
-print sum of array using recursion 
-check if number is palindrome 
-
-*/
 

@@ -9,7 +9,7 @@ public class Main{
         String B = "A";
         String C = A;
         System.out.println(C == A);
-        System.out.println(A.equals(C));
+        System.out.println(A.equals(B));
         System.out.println(A.charAt(0 ));
     }
 }
